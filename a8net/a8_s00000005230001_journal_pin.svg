@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#efe5d5"/>
+      <stop offset="55%" stop-color="#d7c0a0"/>
+      <stop offset="100%" stop-color="#6f563f"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#b58a5f"/>
+      <stop offset="100%" stop-color="#6f472b"/>
+    </linearGradient>
+    <style>
+      .eyebrow { font: 700 28px Arial, sans-serif; letter-spacing: 8px; fill: #4b3b2c; }
+      .title { font: 700 62px Georgia, serif; text-anchor: middle; fill: #1f1b17; }
+      .lead { font: 500 28px Arial, sans-serif; text-anchor: middle; fill: #3d3329; }
+      .small { font: 700 24px Arial, sans-serif; text-anchor: middle; fill: #f7f1e8; }
+      .meta { font: 500 22px Arial, sans-serif; text-anchor: middle; fill: #f7f1e8; opacity: 0.9; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="1500" fill="url(#bg)"/>
+  <rect x="0" y="1030" width="1000" height="470" fill="url(#floor)"/>
+  <rect x="115" y="690" width="770" height="210" rx="38" fill="#8d8b82"/>
+  <rect x="185" y="770" width="630" height="170" rx="22" fill="#6f6f69"/>
+  <rect x="260" y="895" width="480" height="125" rx="16" fill="#a96f39"/>
+  <rect x="315" y="920" width="370" height="22" fill="#875327" opacity="0.45"/>
+  <rect x="115" y="1110" width="770" height="62" rx="31" fill="#2d2018" opacity="0.75"/>
+  <rect x="210" y="1115" width="580" height="160" rx="70" fill="#f5eadc" opacity="0.95"/>
+  <circle cx="235" cy="820" r="52" fill="#eee3d3"/>
+  <circle cx="760" cy="820" r="52" fill="#eee3d3"/>
+  <rect x="140" y="130" width="720" height="120" rx="10" fill="#dcd5c8" opacity="0.45"/>
+  <rect x="185" y="160" width="630" height="58" rx="8" fill="#405b47" opacity="0.7"/>
+  <circle cx="780" cy="605" r="38" fill="#ba8b3b"/>
+  <path d="M780 605 C795 475 910 505 905 660" stroke="#6d5132" stroke-width="8" fill="none"/>
+
+  <text x="500" y="142" class="eyebrow">JAPAN AESTHETIC JOURNAL</text>
+  <text x="500" y="260" class="title">【じゃらんｎｅｔ】宿泊予約(06-1101) |</text>
+<text x="500" y="332" class="title">Japan Aesthetic Journal</text>
+  <text x="500" y="560" class="lead">国内旅行や出張の航空券を、まとめて比較して探してみませんか？</text>
+  <text x="500" y="1322" class="small">総合（旅行）</text>
+  <text x="500" y="1364" class="meta">株式会社リクルート</text>
+  <text x="500" y="1420" class="meta">Local Preview / President Review Required</text>
+</svg>
