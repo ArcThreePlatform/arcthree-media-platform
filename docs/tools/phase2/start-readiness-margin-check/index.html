@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>eBay副業 はじめる前の余白チェック</title>
+  <style>
+    :root {
+      --bg: #fbf6ee;
+      --panel: #fffaf2;
+      --paper: #ffffff;
+      --ink: #3f342c;
+      --muted: #75695f;
+      --line: #eadcc9;
+      --accent: #a97745;
+      --accent-soft: #f6ead9;
+      --notice: #fff2dd;
+      --notice-line: #dfb271;
+      --shadow: 0 16px 42px rgba(89, 64, 40, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(243, 225, 201, 0.65), transparent 32rem),
+        linear-gradient(180deg, #fbf6ee 0%, #f7efe3 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      line-height: 1.75;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .page {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 48px;
+    }
+
+    .hero {
+      padding: 28px 0 22px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 14px;
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    .subcopy {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .intro {
+      margin-top: 22px;
+      padding: 20px 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 250, 242, 0.78);
+    }
+
+    .intro p,
+    .note p,
+    .result-text p {
+      margin: 0;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 24px;
+      align-items: start;
+      margin-top: 26px;
+    }
+
+    .questions {
+      display: grid;
+      gap: 16px;
+    }
+
+    .question {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      box-shadow: 0 10px 28px rgba(89, 64, 40, 0.06);
+    }
+
+    .question h2 {
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+      margin: 0 0 10px;
+      font-size: 1.08rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+
+    .question-note {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .number {
+      flex: 0 0 auto;
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+
+    .options {
+      display: grid;
+      gap: 10px;
+    }
+
+    .option {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 10px;
+      align-items: start;
+      padding: 12px 14px;
+      border: 1px solid #eee2d3;
+      border-radius: 8px;
+      background: #fffdf9;
+      cursor: pointer;
+    }
+
+    .option:hover {
+      border-color: #d8bc9a;
+      background: #fff8ed;
+    }
+
+    .option input {
+      width: 18px;
+      height: 18px;
+      margin: 4px 0 0;
+      accent-color: var(--accent);
+    }
+
+    .option-text {
+      display: grid;
+      gap: 2px;
+    }
+
+    .points {
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 18px;
+    }
+
+    .summary,
+    .note {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .summary {
+      padding: 22px;
+    }
+
+    .score-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .score-label {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .score {
+      color: var(--accent);
+      font-size: 2.6rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .unanswered {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .result,
+    .detail-panel {
+      padding: 16px;
+      border-radius: 8px;
+      background: var(--paper);
+      border: 1px solid #eee2d3;
+    }
+
+    .rank {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 36px;
+      height: 36px;
+      margin-bottom: 10px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--accent);
+      font-weight: 800;
+    }
+
+    .result-title,
+    .detail-title {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+      line-height: 1.45;
+      letter-spacing: 0;
+    }
+
+    .result-text,
+    .detail-panel {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .detail-panel {
+      margin-top: 14px;
+    }
+
+    .detail-list {
+      display: grid;
+      gap: 10px;
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .detail-item {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fffaf2;
+    }
+
+    .detail-item strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--ink);
+      font-size: 0.92rem;
+    }
+
+    .detail-empty {
+      margin: 0;
+      padding: 12px;
+      border: 1px solid var(--notice-line);
+      border-radius: 8px;
+      color: #60402f;
+      background: var(--notice);
+    }
+
+    .reset-button {
+      width: 100%;
+      min-height: 44px;
+      margin-top: 16px;
+      border: 1px solid #cfad86;
+      border-radius: 8px;
+      color: var(--ink);
+      background: linear-gradient(180deg, #fff9ef 0%, #f4dfc3 100%);
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .reset-button:hover {
+      background: #f4dfc3;
+    }
+
+    .note {
+      margin-top: 24px;
+      padding: 18px 20px;
+      color: var(--muted);
+      background: #fffdf9;
+      box-shadow: none;
+    }
+
+    .note strong {
+      color: var(--ink);
+    }
+
+    @media (max-width: 860px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+        order: -1;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        width: min(100% - 22px, 1080px);
+        padding: 18px 0 36px;
+      }
+
+      .hero {
+        padding-top: 18px;
+      }
+
+      .intro,
+      .question,
+      .summary,
+      .note {
+        padding: 16px;
+      }
+
+      .option {
+        grid-template-columns: 22px 1fr;
+        padding: 11px 12px;
+      }
+
+      .score {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero" aria-labelledby="tool-title">
+      <p class="eyebrow">note 003 簡易チェックツール</p>
+      <h1 id="tool-title">eBay副業 はじめる前の余白チェック</h1>
+      <p class="subcopy">資金・時間・在庫・気持ちの余白を、やさしく確認する簡易チェックです。</p>
+      <div class="intro">
+        <p>このチェックは、eBay副業を始めてよい・悪いを決めるものではありません。今の自分に合う始め方を考えるための目安です。無理に急がず、まずは自分の余白を見てみましょう。</p>
+      </div>
+    </section>
+
+    <div class="layout">
+      <section class="questions" aria-label="余白チェック12項目">
+        <article class="question">
+          <h2><span class="number">1.</span>自己資金の余白</h2>
+          <div class="options">
+            <label class="option"><input type="radio" name="q1" value="2"><span class="option-text"><span class="points">2点</span>生活費とは別に、副業に使える余裕資金がある</span></label>
+            <label class="option"><input type="radio" name="q1" value="1"><span class="option-text"><span class="points">1点</span>少額なら使えるが、失敗すると少し不安がある</span></label>
+            <label class="option"><input type="radio" name="q1" value="0"><span class="option-text"><span class="points">0点</span>生活費や支払いに影響しそうな資金しかない</span></label>
+          </div>
+        </article>
+
+        <article class="question">
+          <h2><span class="number">2.</span>毎月の支払い余力</h2>
+          <div class="options">
+            <label class="option"><input type="radio" name="q2" value="2"><span class="option-text"><span class="points">2点</span>毎月の支払い後にも、少し余裕が残る</span></label>
+            <label class="option"><input type="radio" name="q2" value="1"><span class="option-text"><span class="points">1点</span>月によって余裕がある時とない時がある</span></label>
+            <label class="option"><input type="radio" name="q2" value="0"><span class="option-text"><span class="points">0点</span>毎月の支払いでかなりいっぱいである</span></label>
+          </div>
+        </article>
+
+        <article class="question">
+          <h2><span class="number">3.</span>クレジットカード支払い管理</h2>
+          <div class="options">
+            <label class="option"><input type="radio" name="q3" value="2"><span class="option-text"><span class="points">2点</span>支払日・締め日・利用額を把握できている</span></label>
+            <label class="option"><input type="radio" name="q3" value="1"><span class="option-text"><span class="points">1点</span>なんとなく見ているが、細かくは管理していない</span></label>
+            <label class="option"><input type="radio" name="q3" value="0"><span class="option-text"><span class="points">0点</span>支払日や利用額をあまり把握していない</span></label>
+          </div>
+        </article>
+
+        <article class="question">
+          <h2><span class="number">4.</span>初期導入金額</h2>
+          <p class="question-note">仕入れ、梱包資材、発送準備、必要機材などを含めて、最初にどこまで用意できるかの目安です。</p>
+          <div class="options">
+            <label class="option"><input type="radio" name="q4" value="2"><span class="option-text"><span class="points">2点</span>50万円以上を、生活費とは別に用意できそう</span></label>
+            <label class="option"><input type="radio" name="q4" value="1"><span class="option-text"><span class="points">1点</span>25万円以上50万円未満なら、無理なく用意できそう</span></label>
+            <label class="option"><input type="radio" name="q4" value="0"><span class="option-text"><span class="points">0点</span>25万円未満、または生活費に影響しそうで不安がある</span></label>
+          </div>
+        </article>
+
+        <article class="question">
+          <h2><span class="number">5.</span>売れなくても待てる期間</h2>
+          <div class="options">
+            <label class="option"><input type="radio" name="q5" value="2"><span class="option-text"><span class="points">2点</span>数か月売れなくても焦らず待てる</span></label>
+            <label class="option"><input type="radio" name="q5" value="1"><span class="option-text"><span class="points">1点</span>ある程度は待てるが、長く売れないと不安になる</span></label>
+            <label class="option"><input type="radio" name="q5" value="0"><span class="option-text"><span class="points">0点</span>すぐ売れないと支払いが苦しくなる</span></label>
+          </div>
+        </article>
+
+        <article class="question">
+          <h2><span class="number">6.</span>保管スペース</h2>
+          <div class="options">
+            <label class="option"><input type="radio" name="q6" value="2"><span class="option-text"><span class="points">2点</span>商品を安全に保管できる場所がある</span></label>
+            <label class="option"><input type="radio" name="q6" value="1"><span class="option-text"><span class="points">1点</span>少量なら置けるが、増えると不安がある</span></label>
+            <label class="option"><input type="radio" name="q6" value="0"><span class="option-text"><span class="points">0点</span>保管場所がほとんどない</span></label>
+          </div>
+        </article>
+
+        <article class="question">
+          <h2><span class="number">7.</span>作業時間</h2>
+          <p class="question-note">出品、連絡確認、梱包、発送準備を、生活の中に置けるかを見ます。</p>
+          <div class="options">
+            <label class="option"><input type="radio" name="q7" value="2"><span class="option-text"><span class="points">2点</span>1日1時間ほど、落ち着いて作業に向き合える日が多い</span></label>
+            <label class="option"><input type="radio" name="q7" value="1"><span class="option-text"><span class="points">1点</span>毎日は難しいが、週に数回ならまとまった作業時間を取れそう</span></label>
+            <label class="option"><input type="radio" name="q7" value="0"><span class="option-text"><span class="points">0点</span>本業や生活で、出品・確認・発送の時間をほとんど取れない</span></label>
+          </div>
+        </article>
+
+        <article class="question">
+          <h2><span class="number">8.</span>発送対応の余裕</h2>
+          <div class="options">
+            <label class="option"><input type="radio" name="q8" value="2"><span class="option-text"><span class="points">2点</span>売れた後、数日以内に梱包・発送できそう</span></label>
+            <label class="option"><input type="radio" name="q8" value="1"><span class="option-text"><span class="points">1点</span>なんとか対応できそうだが、忙しい時は不安</span></label>
+            <label class="option"><input type="radio" name="q8" value="0"><span class="option-text"><span class="points">0点</span>発送作業をする時間や場所がまだ整っていない</span></label>
+          </div>
+        </article>
+
+        <article class="question">
+          <h2><span class="number">9.</span>英語メッセージへの抵抗感</h2>
+          <div class="options">
+            <label class="option"><input type="radio" name="q9" value="2"><span class="option-text"><span class="points">2点</span>翻訳ツールを使えば、短いやり取りならできそう</span></label>
+            <label class="option"><input type="radio" name="q9" value="1"><span class="option-text"><span class="points">1点</span>不安はあるが、定型文があれば対応できそう</span></label>
+            <label class="option"><input type="radio" name="q9" value="0"><span class="option-text"><span class="points">0点</span>英語メッセージが来るだけでかなり不安になる</span></label>
+          </div>
+        </article>
+
+        <article class="question">
+          <h2><span class="number">10.</span>返品・クレーム時の気持ちの余裕</h2>
+          <div class="options">
+            <label class="option"><input type="radio" name="q10" value="2"><span class="option-text"><span class="points">2点</span>トラブル時も、落ち着いて確認できそう</span></label>
+            <label class="option"><input type="radio" name="q10" value="1"><span class="option-text"><span class="points">1点</span>不安はあるが、手順があれば対応できそう</span></label>
+            <label class="option"><input type="radio" name="q10" value="0"><span class="option-text"><span class="points">0点</span>トラブルが起きるとかなり動揺しそう</span></label>
+          </div>
+        </article>
+
+        <article class="question">
+          <h2><span class="number">11.</span>扱いたい商品への興味</h2>
+          <div class="options">
+            <label class="option"><input type="radio" name="q11" value="2"><span class="option-text"><span class="points">2点</span>自分が扱いたい商品ジャンルがある</span></label>
+            <label class="option"><input type="radio" name="q11" value="1"><span class="option-text"><span class="points">1点</span>なんとなく候補はあるが、まだ探している</span></label>
+            <label class="option"><input type="radio" name="q11" value="0"><span class="option-text"><span class="points">0点</span>何を扱いたいか全く決まっていない</span></label>
+          </div>
+        </article>
+
+        <article class="question">
+          <h2><span class="number">12.</span>無在庫・大量出品への焦り</h2>
+          <div class="options">
+            <label class="option"><input type="radio" name="q12" value="2"><span class="option-text"><span class="points">2点</span>まずは小さく自己在庫中心で試すつもり</span></label>
+            <label class="option"><input type="radio" name="q12" value="1"><span class="option-text"><span class="points">1点</span>無在庫や大量出品にも少し興味がある</span></label>
+            <label class="option"><input type="radio" name="q12" value="0"><span class="option-text"><span class="points">0点</span>とにかく数を増やして早く稼ぎたい気持ちが強い</span></label>
+          </div>
+        </article>
+      </section>
+
+      <aside class="sidebar" aria-label="チェック結果">
+        <section class="summary" aria-live="polite">
+          <div class="score-row">
+            <span class="score-label">合計点</span>
+            <span class="score"><span id="score">0</span><span class="score-label"> / 24</span></span>
+          </div>
+          <p class="unanswered" id="unanswered">未回答：12項目</p>
+          <div class="result">
+            <span class="rank" id="rank">-</span>
+            <h2 class="result-title" id="result-title">まずは上から順に選んでみてください</h2>
+            <div class="result-text" id="result-text">
+              <p>選んだ内容に合わせて、ここに目安が表示されます。</p>
+            </div>
+          </div>
+
+          <div class="detail-panel">
+            <h2 class="detail-title">気になる項目</h2>
+            <div id="detail-text">
+              <p class="detail-empty">選択すると、整えておくと安心な項目がここに表示されます。</p>
+            </div>
+          </div>
+
+          <button class="reset-button" type="button" id="reset">リセット</button>
+        </section>
+      </aside>
+    </div>
+
+    <section class="note">
+      <p><strong>ご注意：</strong>このチェックは、仕入れ判断や投資判断を代行するものではありません。最終判断は、必ずご自身の生活状況・資金状況・時間の余白を見ながら行ってください。</p>
+    </section>
+  </main>
+
+  <script>
+    const totalQuestions = 12;
+    const scoreEl = document.getElementById("score");
+    const unansweredEl = document.getElementById("unanswered");
+    const rankEl = document.getElementById("rank");
+    const titleEl = document.getElementById("result-title");
+    const textEl = document.getElementById("result-text");
+    const detailEl = document.getElementById("detail-text");
+    const resetButton = document.getElementById("reset");
+    const answers = Array.from(document.querySelectorAll('input[type="radio"]'));
+
+    const results = {
+      A: {
+        title: "小さく始めてもよさそう",
+        text: "今の状態なら、無理のない範囲で小さく始める準備ができているかもしれません。ただし、いきなり大きく仕入れたり、大量出品したりする必要はありません。まずは、最初の1品を丁寧に扱うところからで十分です。"
+      },
+      B: {
+        title: "もう少し準備すると安心",
+        text: "始める気持ちはあっても、少し整えてからの方が安心な部分がありそうです。作業環境、お金の通り道、発送準備、保管場所、カード支払いの見え方を、もう一度確認してみましょう。無理に急がなくても大丈夫です。"
+      },
+      C: {
+        title: "まずは情報収集と環境づくりから",
+        text: "今は、仕入れや出品に進むより、まずは情報収集と環境づくりを優先した方が安心かもしれません。これは「向いていない」という意味ではありません。今の生活やお金の状態を守りながら、少しずつ準備していけば大丈夫です。"
+      }
+    };
+
+    const advice = {
+      q1: {
+        title: "自己資金の余白",
+        one: "少額から試す場合でも、生活費と副業用のお金を分けて見えるようにしておくと安心です。",
+        zero: "生活費に影響しそうな場合は、仕入れに進む前に、まず副業用のお金の置き場所を作るところからで大丈夫です。"
+      },
+      q2: {
+        title: "毎月の支払い余力",
+        one: "月によって余裕が変わる場合は、余裕の少ない月を基準に考えると無理が出にくくなります。",
+        zero: "毎月の支払いでいっぱいの時は、仕入れより先に固定費と支払い予定を見える化する方が安心です。"
+      },
+      q3: {
+        title: "カード支払い管理",
+        one: "締め日、支払日、今月の利用額だけでも一覧にしておくと、仕入れ後の不安が減ります。",
+        zero: "カードの支払日や利用額が見えていない状態では、まず管理表を作るところから始めるのがよさそうです。"
+      },
+      q4: {
+        title: "初期導入金額",
+        one: "25万円以上50万円未満でも、最初の仕入れ数を絞り、資材や送料分を残しておけば進め方を考えやすくなります。",
+        zero: "25万円未満、または生活費に影響しそうな場合は、仕入れより先に必要資材と初期費用の内訳を小さく書き出してみましょう。"
+      },
+      q5: {
+        title: "売れなくても待てる期間",
+        one: "長く売れないと不安になりそうな場合は、最初から在庫数を少なくして、待てる範囲を決めておくと安心です。",
+        zero: "すぐ売れないと支払いが苦しくなる状態なら、仕入れ額を増やす前に、売れ残っても困らない範囲を確認しましょう。"
+      },
+      q6: {
+        title: "保管スペース",
+        one: "少量なら置ける場合は、まず保管できる個数を決めて、それ以上増やさない線を引いておくと楽です。",
+        zero: "保管場所がない時は、仕入れより先に、商品を傷めず置ける場所を作るところからで十分です。"
+      },
+      q7: {
+        title: "作業時間",
+        one: "毎日1時間が難しくても、週に数回の作業日を決めておくと続けやすくなります。",
+        zero: "時間がほとんど取れない時は、出品より先に、週のどこに確認・梱包・発送の時間を置けるか見てみましょう。"
+      },
+      q8: {
+        title: "発送対応",
+        one: "忙しい時が不安なら、梱包材を先にまとめておくと、売れた後の負担が少し軽くなります。",
+        zero: "発送の時間や場所が整っていない場合は、最初の商品を選ぶ前に、梱包と発送の動線を確認しておくと安心です。"
+      },
+      q9: {
+        title: "英語メッセージ",
+        one: "定型文があれば対応できそうなら、よく使う短文を先に用意しておくと気持ちが楽になります。",
+        zero: "英語メッセージが大きな不安なら、翻訳ツールで短い返答を試す練習から始めても大丈夫です。"
+      },
+      q10: {
+        title: "返品・クレーム時の余裕",
+        one: "手順があれば対応できそうなら、返品時に見る場所や確認順をメモしておくと落ち着きやすくなります。",
+        zero: "トラブルで大きく動揺しそうな場合は、先に対応手順を知っておくだけでも、始める前の不安が減ります。"
+      },
+      q11: {
+        title: "扱いたい商品",
+        one: "候補を探している段階なら、好きなジャンルと保管しやすいジャンルを分けて考えると選びやすくなります。",
+        zero: "何を扱うか決まっていない時は、仕入れより先に、興味があるものを10個ほど書き出すところからで大丈夫です。"
+      },
+      q12: {
+        title: "無在庫・大量出品への焦り",
+        one: "無在庫や大量出品が気になる時ほど、まずは自己在庫で1品の流れを見ておくと判断しやすくなります。",
+        zero: "早く数を増やしたい気持ちが強い時は、いったん立ち止まり、最初の1品を安全に終えることを優先した方が安心です。"
+      }
+    };
+
+    function getResult(score) {
+      if (score >= 18) return { key: "A", ...results.A };
+      if (score >= 10) return { key: "B", ...results.B };
+      return { key: "C", ...results.C };
+    }
+
+    function escapeHtml(text) {
+      return text.replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      }[char]));
+    }
+
+    function updateDetails(selectedAnswers) {
+      const selectedLow = selectedAnswers
+        .filter(({ value }) => value <= 1)
+        .map(({ name, value }) => {
+          const item = advice[name];
+          return {
+            title: item.title,
+            text: value === 0 ? item.zero : item.one
+          };
+        });
+
+      if (selectedAnswers.length === 0) {
+        detailEl.innerHTML = '<p class="detail-empty">選択すると、整えておくと安心な項目がここに表示されます。</p>';
+        return;
+      }
+
+      if (selectedLow.length === 0) {
+        detailEl.innerHTML = '<p class="detail-empty">大きく気になる項目は少なそうです。とはいえ、最初は小さく試して、無理なく続けられる形を大事にしましょう。</p>';
+        return;
+      }
+
+      const items = selectedLow.map((item) => (
+        `<li class="detail-item"><strong>${escapeHtml(item.title)}</strong>${escapeHtml(item.text)}</li>`
+      )).join("");
+      detailEl.innerHTML = `<ul class="detail-list">${items}</ul>`;
+    }
+
+    function update() {
+      let score = 0;
+      const selectedAnswers = [];
+
+      for (let index = 1; index <= totalQuestions; index += 1) {
+        const selected = document.querySelector(`input[name="q${index}"]:checked`);
+        if (selected) {
+          const value = Number(selected.value);
+          selectedAnswers.push({ name: selected.name, value });
+          score += value;
+        }
+      }
+
+      const unanswered = totalQuestions - selectedAnswers.length;
+      scoreEl.textContent = score;
+      unansweredEl.textContent = `未回答：${unanswered}項目`;
+      updateDetails(selectedAnswers);
+
+      if (selectedAnswers.length === 0) {
+        rankEl.textContent = "-";
+        titleEl.textContent = "まずは上から順に選んでみてください";
+        textEl.innerHTML = "<p>選んだ内容に合わせて、ここに目安が表示されます。</p>";
+        return;
+      }
+
+      const result = getResult(score);
+      rankEl.textContent = result.key;
+      titleEl.textContent = result.title;
+      textEl.innerHTML = `<p>${result.text}</p>`;
+    }
+
+    function reset() {
+      answers.forEach((answer) => {
+        answer.checked = false;
+      });
+      update();
+    }
+
+    answers.forEach((answer) => answer.addEventListener("change", update));
+    resetButton.addEventListener("click", reset);
+    update();
+  </script>
+</body>
+</html>
